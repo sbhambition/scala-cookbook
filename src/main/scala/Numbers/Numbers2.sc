@@ -51,9 +51,21 @@ val x = 1 to 10 toArray
 val y = 2 to 10 toList
 //x and y being range we can just add to* methods at the end
 
-val newrn = for(i<-rn) yield i*2
+val newrn = for (i <- rn) yield i * 2
+
+
+for (i <- rn) yield i.toDouble
+
 
 //Formatting numbers and currency
+val pi = scala.math.Pi
+
+println(f"$pi%1.5f")
+println(f"$pi%06.2f")
+//for scala version prior to 2.10 use the format method
+
+"%06.2f".format(pi)
+
 
 
 
