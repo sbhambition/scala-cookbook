@@ -1,5 +1,3 @@
-package main.scala
+package main.scala.ControlStuctures
 
-case class Person(firstName: String, lastName: String) {
-
-}
+case class Person(firstName: String, lastName: String)
