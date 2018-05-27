@@ -38,4 +38,9 @@ class Person(var firstname: String, var lastName: String) {
 Anything declaread within the body of the class other than the method declaration is a part of the primary constructor
 because auxiliary constructor should always call a previously defined constructor in the same class, auxiliary constructors will also execute the same code
 
+1. if a field is declared var , scala generates both getter and setter
+2. if a field is declared val , scala generates only getter
+3. if a field is declared val or var and declared private , which prevents getter and setter from being generated
+4. if a field doesnot have var or val, scala becomes conservative and doesnot generate getters and setters for you
  */
+
