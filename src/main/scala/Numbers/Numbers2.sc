@@ -1,50 +1,67 @@
-//find the shortest and the highest range for nums
-Short.MinValue
-Int.MaxValue
-Float.MaxValue
-Double.MinPositiveValue
+//Converting between numeric types
 
-//parsing a number from a string
-//courtesy of the StringLike trait
-val a = "34"
-a.toInt
+//convert a double to int
+19.45.toInt
 
-//"hello".toInt
-//numberformatexception
+//use the to* methods to convert one number type to another,
+//To avoid potential conversion errors you the isValid method
 
-//Creating BigInt and BigDecimal instances direclty from strings
+val a = 1000L
+a.isValidByte
+a.isValidChar
+a.isValidInt
+a.isValidShort
 
-val b = BigInt("1")
-val b1 = BigDecimal("23")
+//Overiding the default numeric type
 
-//Handling a base and radix
-Integer.parseInt("10", 2)
+val a1 = 1
 
-//handling exceptions
-def toInt(s: String): Option[Int] = {
-  try {
-    Some(s.toInt)
-  } catch {
-    case e: NumberFormatException => None
-  }
-}
+val a2 = 1d
+val a3 = 3f
+// numeric type is automatically inferred
+//to override you can jsut use annotation
 
-//for handling exception cases, use the Scala Option, Some, None
-toInt("Subash").getOrElse(0)
-toInt("20").getOrElse(0)
+val a4: Int = 5
+val a5: Double = 3.56
 
-//or use a match expression
-val aString = "hello"
-toInt(aString) match {
-  case Some(n) => println(n)
-  case None => println("That wasnot a number")
-}
 
-//Alternatives to Option/Some/None
 
-//if tou like Option/Some/None , but need access to the exception informatuon, use
-// try/success/failure
-//Either, left, right
+
+0.1 + 0.2 //doesnot return 0.3 exactly, use some precision function (define ur own)
+
+//Generating Random numbers
+val r = scala.util.Random
+r.nextInt()
+r.nextInt(100) //specifies int from 0 99
+
+var range = 0 to r.nextInt(50)
+println(range)
+range.foreach(println)
+//yeild returns a Vector
+
+//Creating Range , lIst and Array of nums
+
+val rn = 1 to 10
+val rn1 = 1 to 10 by 3
+rn1.foreach(println) //using foreach
+
+for (i <- rn1) println(i) //using for loop
+
+val x = 1 to 10 toArray
+val y = 2 to 10 toList
+//x and y being range we can just add to* methods at the end
+
+val newrn = for(i<-rn) yield i*2
+
+//Formatting numbers and currency
+
+
+
+
+
+
+
+
 
 
 
