@@ -1,6 +1,6 @@
 package main.scala.ClassesAndProperties
 
-class Person(var firstname: String, var lastName: String) {
+class Person (var firstname: String, var lastName: String) {
   println("the constructor begins")
 
   //some class fields

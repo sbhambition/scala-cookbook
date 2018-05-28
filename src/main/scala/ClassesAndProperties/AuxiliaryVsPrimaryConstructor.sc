@@ -77,3 +77,6 @@ object CaseClassTest extends App {
   a.age = 82
   println(a)
 }*/
+
+//defining a private primary constructor
+

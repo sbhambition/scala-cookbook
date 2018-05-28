@@ -58,9 +58,25 @@ val p = Person1("John Smith", 30) //when we write this , scala complier converts
 //val p = Person.apply("John smith", 30)
 //this is the call to the apply method of the companion object of the Person Class
 
+/*
 object Person {
   def apply() = new Person1("<no -name>", 0)
 
   def apply(name: String) = new Person1(name, 0)
 }
+
+object CaseClassTest extends App {
+  val a = Person1() // corresponds to apply()
+  val b = Person1("Pam") // corresponds to apply(name: String)
+  val c = Person1("William Shatner", 82)
+  println(a)
+  println(b)
+  println(c)
+  // verify the setter methods work
+  a.name = "Leonard Nimoy"
+  a.age = 82
+  println(a)
+}*/
+
+//defining a private primary constructor
 
